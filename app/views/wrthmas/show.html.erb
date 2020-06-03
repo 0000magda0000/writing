@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @wrthma.name %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @wrthma.title %>
+</p>
+
+
+<iframe src=<%= url_for(@wrthma.picture) %> width="700" height="780" style="border: none;"></iframe>
+
+<%= link_to 'Edit', edit_wrthma_path(@wrthma) %> |
+<%= link_to 'Back', wrthmas_path %>

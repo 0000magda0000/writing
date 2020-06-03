@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Wrthmas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Title</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @wrthmas.each do |wrthma| %>
+      <tr>
+        <td><%= wrthma.name %></td>
+        <td><%= wrthma.title %></td>
+        <td><%= link_to 'Show', wrthma %></td>
+        <td><%= link_to 'Edit', edit_wrthma_path(wrthma) %></td>
+        <td><%= link_to 'Destroy', wrthma, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Wrthma', new_wrthma_path %>
